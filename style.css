@@ -1,0 +1,22 @@
+.product-box {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+}
+
+.product {
+   text-align: center;
+}
+.product__img {
+   display: block;
+   width: 200px;
+   height: 200px;
+}
+
+.product__title {
+   font-size: 16px;
+}
+
+.product__descr {
+   font-size: 12px;
+}

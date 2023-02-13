@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <div class="product-box"></div>
+
+   <script src="data.js"></script>
+
+   <script>
+      const productBox = document.querySelector('.product-box');
+      console.log(productBox);
+      const productsData = JSON.parse(dataInfo);
+      console.log(productsData);
+      
+      productsData.forEach(element => {
+      
+      const productEl = document.createElement('div');
+      productEl.classList.add('product');
+      
+
+      const productImg = document.createElement('img');
+      productImg.classList.add('product__img');
+      productImg.setAttribute('alt', 'photo')
+      productImg.src = element.img_src;
+      console.log(productImg);
+
+      const productTitle = document.createElement('h3');
+      productTitle.classList.add('product__title');
+      productTitle.textContent = element.camera.name;
+      console.log(productTitle);
+
+      const productText = document.createElement('p');
+      productText.classList.add('product__descr');
+      productText.textContent = element.camera.full_name;
+      console.log(productText);
+
+
+      productBox.appendChild(productEl);
+      productEl.appendChild(productImg);
+      productEl.appendChild(productTitle);
+      productEl.appendChild(productText);
+   });
+   </script>
+</body>
+</html>
