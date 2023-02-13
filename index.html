@@ -15,9 +15,9 @@
 
    <script>
       const productBox = document.querySelector('.product-box');
-      console.log(productBox);
+      //console.log(productBox);
       const productsData = JSON.parse(dataInfo);
-      console.log(productsData);
+      //console.log(productsData);
       
       productsData.forEach(element => {
       
@@ -29,17 +29,17 @@
       productImg.classList.add('product__img');
       productImg.setAttribute('alt', 'photo')
       productImg.src = element.img_src;
-      console.log(productImg);
+      //console.log(productImg);
 
       const productTitle = document.createElement('h3');
       productTitle.classList.add('product__title');
       productTitle.textContent = element.camera.name;
-      console.log(productTitle);
+      //console.log(productTitle);
 
       const productText = document.createElement('p');
       productText.classList.add('product__descr');
       productText.textContent = element.camera.full_name;
-      console.log(productText);
+      //console.log(productText);
 
 
       productBox.appendChild(productEl);
